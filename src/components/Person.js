@@ -1,6 +1,14 @@
-import React from 'react';
 import './Person.css';
+import React from 'react'
 
-// PERSON COMPONENT CODE GOES HERE
+  function Person(props) {
+  return (
+    <div>
+       <h3>{props.member.name}</h3>
+    </div>
+  )
+}
 
-export default Person;
+
+export default Person
+
