@@ -1,0 +1,40 @@
+.person-card {
+  background: #fff;
+  width: 250px;
+  height: 330px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person-photo {
+  margin-top: 10px;
+  width: 90%;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.person-name {
+  margin-top: 2px;
+  margin-bottom: 4px;
+  color: orange;
+  width: 90%;
+}
+
+.person-quote {
+  font-style: italic;
+  font-size: 11px;
+  width: 90%;
+}
+
+.person-super-relative {
+  font-weight: bold;
+  color: rgb(87, 165, 255);
+  font-size: 14px;
+  width: 90%;
+  text-align: center;
+  margin-top: 2px;
+}
+

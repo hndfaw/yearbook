@@ -5,7 +5,7 @@ import './Cohort.css';
 function Cohort(props) {
 
   return (
-    <div>
+    <div className="cohort">
       {props.staff.map(member => {
         return <Person member={member} key={member.id} />
       })}
