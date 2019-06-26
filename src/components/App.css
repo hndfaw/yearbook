@@ -5,6 +5,7 @@ html {
 
 body {
   background: url('https://ak9.picdn.net/shutterstock/videos/1007204479/thumb/1.jpg');
+  background-blend-mode: lighten;
   background-size: cover;
   background-attachment: fixed;
   position: absolute;
@@ -19,8 +20,54 @@ body {
   text-align: center;
 }
 
-h1 {
+h1, .tabs-container {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 10px;
   color: limegreen;
 }
+
+.tabs-container {
+  padding: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-right: 25px;
+  outline: none;
+}
+
+.btn-dark {
+  color: rgb(43, 106, 255);
+}
+
+.btn-light {
+  color: rgb(173, 197, 253);
+}
+
+.add-btn {
+  color: red;
+  position: absolute;
+  right: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+/* .inline-block {
+  display: inline-block;
+} */

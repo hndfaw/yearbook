@@ -1,0 +1,27 @@
+.add-studnet-form {
+  height: 200px;
+  width: 180px;
+  background: #fff;
+  box-shadow: 0 0 10px 1px gray;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  right: 15px;
+  top: 140px;
+}
+
+label {
+  margin-bottom: -15px;
+  float: left;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
