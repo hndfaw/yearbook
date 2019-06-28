@@ -7,7 +7,13 @@ function Cohort(props) {
   return (
     <div className="cohort">
       {props.staff.map(member => {
-        return <Person member={member} key={member.id} />
+
+        return <Person
+        name={member.name}
+        quote={member.quote}
+        photo={member.photo}
+        superlative={member.superlative}
+        key={member.id} />
       })}
     </div>
   )

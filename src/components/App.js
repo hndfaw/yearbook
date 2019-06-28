@@ -16,7 +16,6 @@ class App extends Component {
     }
   }
 
-
   selectTab = (e) => {
     const {staff, students} = this.state;
 

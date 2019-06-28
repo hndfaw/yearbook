@@ -25,25 +25,24 @@ class AddStudent extends Component {
       superlative,
       photo
     }
+
     this.props.addNewStudent(newStudent);
-    // this.resetInputs();
+    this.resetInputs();
   }
 
-  // resetInputs = () => {
-  //   this.setState({name: ''});
-  //   this.setState({quote: ''});
-  //   this.setState({superlative: ''});
-  // }
+  resetInputs = () => {
+    this.setState({name: '', quote: '', superlative: ''});
+  }
 
   render() {
     return (
       <form className={`add-studnet-form ${this.props.hide ? 'flex' : 'hide'}`}>
         <label>Name</label>
-        <input  onChange={this.handleChange} name="name" type="text" vlaue={this.state.name}/>
+        <input  onChange={this.handleChange} name="name" type="text" value={this.state.name}/>
         <label>Quote</label>
-        <input vlaue={this.state.quote} onChange={this.handleChange} name="quote" type="text"/>
+        <input value={this.state.quote} onChange={this.handleChange}name="quote" type="text"/>
         <label>Superlative</label>
-        <input vlaue={this.state.superlative} onChange={this.handleChange} name="superlative" type="text"/>
+        <input value={this.state.superlative} onChange={this.handleChange}name="superlative" type="text"/>
         <button onClick={this.submitNewStudent}>Add</button>
       </form>
     )

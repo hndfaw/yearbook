@@ -1,13 +1,13 @@
 import './Person.css';
 import React from 'react'
 
-  function Person(props) {
+  function Person({photo, name, quote, superlative}) {
   return (
     <div className="person-card">
-        <img className="person-photo" src={props.member.photo} alt="member"/>
-       <h4 className="person-name">{props.member.name}</h4>
-       <p className="person-quote" >"{props.member.quote}"</p>
-       <p className="person-super-relative">{props.member.superlative}</p>
+       <img className="person-photo" src={photo} alt="member"/>
+       <h4 className="person-name">{name}</h4>
+       <p className="person-quote" >"{quote}"</p>
+       <p className="person-super-relative">{superlative}</p>
     </div>
   )
 }
