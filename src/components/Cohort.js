@@ -4,17 +4,18 @@ import './Cohort.css';
 
 function Cohort(props) {
 
+  const members = props.staff.map(member => {
+    return <Person
+    name={member.name}
+    quote={member.quote}
+    photo={member.photo}
+    superlative={member.superlative}
+    key={member.id} />
+  })
+
   return (
     <div className="cohort">
-      {props.staff.map(member => {
-
-        return <Person
-        name={member.name}
-        quote={member.quote}
-        photo={member.photo}
-        superlative={member.superlative}
-        key={member.id} />
-      })}
+      {members}
     </div>
   )
 }

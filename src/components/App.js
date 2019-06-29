@@ -20,12 +20,9 @@ class App extends Component {
     const {staff, students} = this.state;
 
     if (e.target.name === 'staff') {
-      this.setState({data: staff});
-      this.setState({currentValue: 'staff'});
-      this.setState({displayForm: false});
+      this.setState({data: staff, currentValue: 'staff', displayForm: false });
     } else {
-      this.setState({data: students});
-      this.setState({currentValue: 'students'});
+      this.setState({data: students, currentValue: 'students'});
     }
   }
 
@@ -34,8 +31,9 @@ class App extends Component {
   }
 
   addNewStudent = (newStudent) => {
-    this.setState({students: [...this.state.students, newStudent]})
-    this.setState({data: [...this.state.students, newStudent]})
+    const students = [...this.state.students, newStudent];
+    const data = [...this.state.students, newStudent];
+    this.setState({data, students })
   }
 
   render() {
