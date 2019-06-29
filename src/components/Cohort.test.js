@@ -8,4 +8,5 @@ describe.skip('Cohort', () => {
       expect(wrapper).toMatchSnapshot();
 
   })
+
 })

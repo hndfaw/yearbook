@@ -37,21 +37,24 @@ class App extends Component {
   }
 
   render() {
-
+    const {currentValue, displayForm, data} = this.state;
+    const studentTabStyle = (currentValue === 'students') ? "btn-dark" : "btn-light";
+    const staffTabStyle = currentValue === 'staff' ? "btn-dark" : "btn-light";
+    const addNewStudentBtnStyle = currentValue === 'students' ? "add-btn" : "hide";
     return (
       <div className="App">
         <header className="App-header">
         <h1>Turing Yearbook</h1>
         <div className="tabs-container">
           <div className="inline-block">
-            <button  onClick={this.selectTab} name="staff" className={`btn ${this.state.currentValue === 'staff' ? "btn-dark" : "btn-light"}`} type="button" >Staff</button>
-            <button onClick={this.selectTab} name="students" className={`btn ${this.state.currentValue === 'students' ? "btn-dark" : "btn-light"}`} type="button" >Students</button>
+            <button  onClick={this.selectTab} name="staff" className={`btn ${staffTabStyle}`} type="button" >Staff</button>
+            <button onClick={this.selectTab} name="students" className={`btn ${studentTabStyle}`} type="button" >Students</button>
           </div>
-          <button onClick={this.showAddNewStudent} className={`${this.state.currentValue === 'students' ? "add-btn" : "hide"}`}>Add new student</button>
+          <button onClick={this.showAddNewStudent} className={`${addNewStudentBtnStyle}`}>Add new student</button>
         </div>
         </header>
-        <AddStudent addNewStudent={this.addNewStudent} hide={this.state.displayForm}/>
-        <Cohort staff={this.state.data} />
+        <AddStudent addNewStudent={this.addNewStudent} hide={displayForm}/>
+        <Cohort staff={data} />
       </div>
     );
   }
